@@ -1,12 +1,10 @@
 const errorElement = document.querySelector('#error');
 
-export const errorDisplayNone = () => {
-    console.log("before error");
+export const hideError = () => {
     errorElement.style.display = 'none';
-    console.log("after error");
 };
 
-export const errorOccured = () => {
+export const showError = () => {
     errorElement.innerHTML = 'Произошла ошибка, попробуйте ещё раз.';
     errorElement.style.display = 'block';
 };

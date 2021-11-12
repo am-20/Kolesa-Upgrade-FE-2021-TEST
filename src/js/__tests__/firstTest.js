@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { getItemsRequest } from '../requests';
 import { appDisplayBlock } from '../appElement';
-import { loaderDisplayBlock, loaderDisplayNone } from '../loader';
+import { loaderDisplayBlock, loaderDisplayNone, showLoader } from '../loader';
 
 jest.mock('axios');
 
@@ -27,7 +27,7 @@ describe('Группа тестов.', () => {
                 () => Promise.reject(errorResponse),
             );
 
-        loaderDisplayBlock();
+        showLoader();
     });
 
     afterAll(() => {
@@ -76,10 +76,4 @@ describe('Группа тестов.', () => {
 
         return expect(getItemsRequest()).resolves.toEqual(data);
     });
-
-    // App Element Test
-
-    // test('App element test.', () => {
-    //     expect(appElement.style.display).toEqual('none');
-    // });
 });

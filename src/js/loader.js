@@ -1,5 +1,5 @@
 const loader = document.querySelector('#loader');
 
-export const loaderDisplayBlock = () => loader.style.display = 'block';
+export const showLoader = () => loader.style.display = 'block';
 
-export const loaderDisplayNone = () => loader.style.display = 'none';
+export const hideLoader = () => loader.style.display = 'none';
