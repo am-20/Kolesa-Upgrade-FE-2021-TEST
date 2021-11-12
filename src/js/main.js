@@ -1,5 +1,2 @@
-import '../css/style.css';
+import '../css/style.scss';
 
-document.querySelector('#app').innerHTML = `
-  <h1>Hello, Kolesa Upgrade!</h1>
-`;

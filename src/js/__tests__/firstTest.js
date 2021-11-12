@@ -1,5 +1,7 @@
 import axios from 'axios';
 import { getItemsRequest } from '../requests';
+import { appDisplayBlock } from '../appElement';
+import { loaderDisplayBlock, loaderDisplayNone } from '../loader';
 
 jest.mock('axios');
 
@@ -24,6 +26,8 @@ describe('Группа тестов.', () => {
             .mockImplementationOnce(
                 () => Promise.reject(errorResponse),
             );
+
+        loaderDisplayBlock();
     });
 
     afterAll(() => {
@@ -59,10 +63,10 @@ describe('Группа тестов.', () => {
     */
     test('Пример тестирования реального запроса (getItemsRequest).', () => {
         const data = [{
-            id:    1,
+            id: 1,
             title: 'Заголовок 1',
         }, {
-            id:    2,
+            id: 2,
             title: 'Заголовок 2',
         }];
 
@@ -72,4 +76,10 @@ describe('Группа тестов.', () => {
 
         return expect(getItemsRequest()).resolves.toEqual(data);
     });
+
+    // App Element Test
+
+    // test('App element test.', () => {
+    //     expect(appElement.style.display).toEqual('none');
+    // });
 });

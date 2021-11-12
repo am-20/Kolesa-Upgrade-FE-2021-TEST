@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/js/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div class="app" id="app">
+    <h1 class="app__header">App Element Block</h1>
+    <p class="app__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Error reiciendis rem ad aut, eligendi rerum animi
+      dolorum exercitationem voluptatibus ipsa dicta magni molestiae? Eius hic, rem corrupti voluptatum nihil dolor?
+    </p>
+    <button class="app__btn app__btn--yellow">First</button>
+    <button class="app__btn app__btn--green">Second</button>
+    <button class="app__btn app__btn--blue">Third</button>
+    <p class="app__error" id="error">
+      This is the Error Block
+    </p>
+    <div class="app__loader-wrapper" id="loader">
+      <span class="loader">
+        <span class="loader-inner"></span>
+      </span>
+    </div>
+  </div>
+  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/src/js/bigUntestableCode.js"></script>
+  <script type="module" src="/src/js/loader.js"></script>
+</body>
+
 </html>
